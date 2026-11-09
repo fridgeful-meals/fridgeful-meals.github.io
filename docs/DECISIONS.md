@@ -19,3 +19,5 @@
 - Renamed the organization and Pages repository to fridgeful-meals/fridgeful-meals.github.io at the user’s request for a food-focused free address.
 
 - Added built-in ingredient search alongside photo upload. Search aliases map to canonical ingredients; same-unit/same-location additions merge quantities. Custom ingredients remain inventory-only when outside the recipe library.
+
+- Expanded inventory search to a curated 460-name library with categories, aliases and ranked matching. Kept specific cuts/products distinct from generic ingredients. No broader recipe coverage or live catalog access is implied.

@@ -64,4 +64,8 @@ The organization website repository is fridgeful-meals/fridgeful-meals.github.io
 
 ## Ingredient search
 
-My fridge includes a searchable built-in ingredient list alongside photo upload. Search matches common names and aliases (for example, tomato → tomatoes). Selecting a result opens the quantity/unit/location confirmation form. Existing items with matching name, unit and location receive the added quantity instead of a duplicate row; other locations or units remain separate. Unknown names can be added as custom inventory. Only ingredients in the existing recipe library affect meal recommendations and grocery deductions; no live store search or new AI recognition is implied.
+My fridge includes a searchable built-in list of 460 ingredients across 15 food categories alongside photo upload. Search matches common names and aliases (for example, tomato → tomatoes). Selecting a result opens the quantity/unit/location confirmation form. Existing items with matching name, unit and location receive the added quantity instead of a duplicate row; other locations or units remain separate. Unknown names can be added as custom inventory. Only ingredients in the existing recipe library affect meal recommendations and grocery deductions; no live store search or new AI recognition is implied.
+
+### Extended ingredient coverage
+
+Includes meat/poultry (ground beef and minced-beef aliases), seafood, vegetables, fruit, dairy, dairy alternatives, plant proteins, grains/pasta, bread, beans/canned foods, herbs/spices, sauces, baking, nuts/seeds/dried fruit, and frozen foods. Categories are computed from the curated dataset. Exact ingredient matches rank first, aliases next, then broader matches; token order and accents are normalized. Category filtering, batches of 12, and a scrollable result area keep the page manageable. This expands inventory search only, not the six-recipe planner or retailer price catalog.
