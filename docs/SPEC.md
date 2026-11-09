@@ -61,3 +61,7 @@ Real vision and model-generated recommendations remain future integrations; the 
 ## GitHub Pages delivery
 
 The organization website repository is fridgeful-meals/fridgeful-meals.github.io. The intended Pages address is https://fridgeful-meals.github.io/. A separate Vite static entry reuses the same React app; `npm run build:pages` emits `out/`. The Pages workflow tests and builds changes before publishing main, while pull requests run checks without publishing. Website visitor data remains browser-local. Organization/repository members need write permission to contribute directly. The original personal repository is retained as an earlier snapshot; use the organization repository going forward.
+
+## Ingredient search
+
+My fridge includes a searchable built-in ingredient list alongside photo upload. Search matches common names and aliases (for example, tomato → tomatoes). Selecting a result opens the quantity/unit/location confirmation form. Existing items with matching name, unit and location receive the added quantity instead of a duplicate row; other locations or units remain separate. Unknown names can be added as custom inventory. Only ingredients in the existing recipe library affect meal recommendations and grocery deductions; no live store search or new AI recognition is implied.

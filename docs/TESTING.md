@@ -23,3 +23,12 @@
 - Phone layout has no unintended horizontal overflow; keyboard focus is visible.
 
 See the final verification report for checks actually performed. This checklist is not itself a claim that every manual check passed.
+
+## Ingredient search
+
+- Search tomato and confirm tomatoes appears as a canonical result.
+- Select an existing item, confirm quantity/location, and verify the quantity increases without another row.
+- Search apples, add the result, and verify a new inventory row.
+- Search an unknown ingredient and use the custom-item option.
+- Clear the search and confirm suggested ingredients return.
+- Refresh and confirm inventory additions persist.

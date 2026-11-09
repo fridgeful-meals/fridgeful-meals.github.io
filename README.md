@@ -31,7 +31,7 @@ The earlier `kaylac18/Fridgeful` repository is preserved as a prior snapshot; it
 
 ## Features
 
-Fridge image preview and editable inventory; household settings; rule-based dinner plans; recipes and swaps; package-based grocery estimates; shopping exports; external Instacart handoff; team tasks/notes; validated JSON handoffs; downloadable spec; timed demo guide; incremental build prompts.
+Ingredient search, fridge image preview and editable inventory; household settings; rule-based dinner plans; recipes and swaps; package-based grocery estimates; shopping exports; external Instacart handoff; team tasks/notes; validated JSON handoffs; downloadable spec; timed demo guide; incremental build prompts.
 
 The website stays focused on the original fridge-to-dinner concept. The five generic business-tool suggestions are not separate app features.
 

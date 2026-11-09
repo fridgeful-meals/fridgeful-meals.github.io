@@ -17,3 +17,5 @@
 - Scope correction: user asked to return to the original food-scanner concept. Removed Business Lab navigation and the five generic business-analysis exercises; retained the food journey and team/spec workspace.
 
 - Renamed the organization and Pages repository to fridgeful-meals/fridgeful-meals.github.io at the user’s request for a food-focused free address.
+
+- Added built-in ingredient search alongside photo upload. Search aliases map to canonical ingredients; same-unit/same-location additions merge quantities. Custom ingredients remain inventory-only when outside the recipe library.
