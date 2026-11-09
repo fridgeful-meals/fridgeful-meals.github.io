@@ -8,7 +8,7 @@
 
 1:30–2:00 — Shopping list: missing ingredients, inventory deductions, full package prices and budget. Export the list. Explain that Instacart is an external handoff.
 
-2:00–2:40 — Business Lab and Project Studio: show SWOT/personas, product spec, team tasks, build prompts and the group's source workflow.
+2:00–2:40 — Project Studio: show the product spec, team tasks, build prompts and the group's source workflow.
 
 2:40–3:00 — What we learned and what comes next: real vision, verified catalogs, shared household storage. End: less waste, more dinner.
 

@@ -17,7 +17,6 @@
 - Swap updates shopping demand and clears checked items.
 - Shopping quantities aggregate across dinners and use compatible inventory exactly once.
 - Copy/export outputs the displayed list; Instacart opens externally with clear limitations.
-- Business persona selection changes content; pitch checklist responds to input.
 - Tasks/owners/statuses and notes persist after refresh.
 - JSON import rejects malformed/oversized data; summary precedes merge/replacement; backup can be downloaded.
 - Source ZIP downloads and contains source/docs, not secrets, runtime state or dependencies.

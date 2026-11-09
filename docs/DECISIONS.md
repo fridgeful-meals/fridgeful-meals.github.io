@@ -13,3 +13,5 @@
 - User approved the easier organization option: use the existing BUS-659 organization and its root Pages address rather than creating fridgeful-team.
 - Added an independent Vite static entry for GitHub Pages while retaining the original Sites build configuration.
 - Expanded Business Lab to all five suggestions, preserving clear boundaries between templates, extractive summaries, fictional samples, manual model prompts and live AI.
+
+- Scope correction: user asked to return to the original food-scanner concept. Removed Business Lab navigation and the five generic business-analysis exercises; retained the food journey and team/spec workspace.

@@ -8,7 +8,7 @@ Shared instruction: Inspect the current code and spec first. Complete only the s
 4. **Planner:** Validate household scaling, diet/time eligibility, use-soon priority and budget logic. Add targeted tests for new behavior.
 5. **Shopping:** Verify aggregation, inventory subtraction, package rounding, exports and budget overages. Never call sample data live prices.
 6. **Team:** Take one GitHub issue on a separate branch, implement acceptance criteria and open a pull request for another member. Update the decision log.
-7. **Business:** Refine SWOT, pricing hypotheses, personas and pitch. Ground new claims in actual evidence; record unknowns.
+7. **Household research:** Test the fridge-to-meals-to-shopping flow with a household. Record confusion, budget feedback, and whether the plan avoids duplicate purchases.
 8. **Release:** Test the end-to-end demo, map rubric coverage, verify honest labels, review sharing, publish the approved revision and rehearse the 2–3 minute story.
 
 Review prompt: Review step [number] against its acceptance criteria. Give reproducible test steps, record gaps and bugs, fix only approved scope, retest affected behavior, and stop before the next stage.

@@ -13,7 +13,7 @@ Busy households struggle to know what they own, plan meals, and avoid duplicate 
 3. Choose 1–12 people, a $1–$1,000 dinner budget, 1–7 dinners, store label, Any/Vegetarian diet, cooking-time limit, meal cravings, and priority.
 4. Create a plan from six curated recipes. Inspect scaled ingredients/steps and swap meals.
 5. Review combined ingredient demand, inventory deductions, full packages and estimated costs. Copy/download the list; optionally open Instacart externally.
-6. Review business hypotheses and collaborate through documented code review or file handoffs.
+6. Review the product spec and collaborate through documented code review or file handoffs.
 
 ## Acceptance criteria
 
@@ -26,7 +26,6 @@ Busy households struggle to know what they own, plan meals, and avoid duplicate 
 | Budget | Prefer affordable additions; show overage when constraints do not fit | Full packages, illustrative prices, dinner-only budget |
 | Shopping | Aggregate demand; subtract compatible units once; round up packages; no negative purchases | Different units are not converted automatically |
 | Order | Copy list and open external Instacart website | No cart creation, transfer, availability promise or order placement |
-| Business | SWOT, pricing hypotheses, segment persona, keyword pitch checklist | No researched traction or AI/investor validation |
 | Team | Editable tasks, owners/statuses, notes, source download and validated JSON handoff | Local persistence; no live shared database |
 | Presentation | Dashboard plus one complete fridge→plan→shop flow and a timed demo guide | Rubric not provided; exact grading coverage unverified |
 
@@ -48,26 +47,16 @@ Free basic plan; test a $4.99/month premium hypothesis for shared households and
 
 ## Scope and limits
 
-Working: forms, calculations, recipe selection, persistence, exports and business exercises. Simulated: scan recognition, prices, personas and pitch keyword feedback. Planned: real vision, live store catalogs, validated allergy/nutrition handling, authenticated synchronization and permitted grocery ordering. A financial ticker dashboard and job impact estimator were examples from the assignment prompt, not confirmed requirements; omit unless the rubric requires them.
+Working: forms, calculations, recipe selection, persistence, exports. Simulated: scan recognition and illustrative grocery prices. Planned: real vision, live store catalogs, validated allergy/nutrition handling, authenticated synchronization and permitted grocery ordering. A financial ticker dashboard and job impact estimator were examples from the assignment prompt, not confirmed requirements; omit unless the rubric requires them.
 
 Users confirm ingredients and freshness; the app cannot detect spoilage. Recipe images are illustrative. Basic seasonings, breakfast/lunch, taxes and delivery fees are excluded. Review labels for allergies. External assets and Instacart require internet access; core local planning does not.
 
 
-## Updated assignment suggestions: five-tool coverage
+## Scope clarification
 
-All five suggested tools are now accessible in Business Lab, with custom inputs. These are transparent interactive demo exercises and copyable prompts for a real AI tool. The site does not claim a model is connected.
+The five business-tool examples are alternative assignment suggestions, not Fridgeful features. At the user's request, the website focuses on the original food-scanner concept: photo review, editable fridge/pantry inventory, household preferences, weekly meals, budget-aware shopping and quick recipes. Project Studio retains the spec, team tasks, build prompts and presentation guide.
 
-| Suggestion | Input | Working output | Live-AI/data boundary |
-| --- | --- | --- | --- |
-| AI business idea evaluator | Business idea and customer | SWOT hypotheses, pricing models, segments and a validation experiment | Template logic; copy prompt for actual LLM analysis |
-| Investor pitch analyzer | Pasted pitch | Clarity/problem, model, investor appeal/evidence checklist, stage framing and rewrite structure | Keyword checks; cannot establish funding readiness |
-| Smart financial dashboard | Ticker and optional pasted news | Fictional sample price, P/E, P/S, market cap; extractive news digest; external research link | No live quote/key-ratio feed, GPT call or current-news retrieval |
-| GenAI job impact estimator | Job title and actual tasks | Qualitative task-assistance exposure, LLM use cases, human judgment boundaries and reskilling plan | Heuristic; no measured job-loss probability |
-| Marketing persona generator | Product and segment | Hypothetical persona, pain points, channels and message to test | Templates; not researched customer evidence |
-
-### AI acceptance boundary
-
-If the rubric requires genuine in-app generative AI or current financial data, those criteria remain unmet until a secured server-side model/data service is added. Never put a provider API key in the static GitHub Pages bundle. Copyable AI prompts support an explicitly manual AI-assisted classroom workflow; they are not equivalent to a live integration.
+Real vision and model-generated recommendations remain future integrations; the current prototype labels its sample scanning and rule-based recipe selection honestly.
 
 ## GitHub Pages delivery
 

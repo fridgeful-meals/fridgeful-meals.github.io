@@ -33,11 +33,11 @@ The earlier `kaylac18/Fridgeful` repository is preserved as a prior snapshot; it
 
 Fridge image preview and editable inventory; household settings; rule-based dinner plans; recipes and swaps; package-based grocery estimates; shopping exports; external Instacart handoff; team tasks/notes; validated JSON handoffs; downloadable spec; timed demo guide; incremental build prompts.
 
-Business Lab includes all five suggestions: business idea evaluator, pitch analyzer, financial dashboard, job-impact exercise and product persona generator. Each accepts input and returns a structured demo, with an AI-ready prompt users can copy to an approved model.
+The website stays focused on the original fridge-to-dinner concept. The five generic business-tool suggestions are not separate app features.
 
 ## Honest limits
 
-No connected LLM, vision recognition, live financial/retailer feed, direct order placement, or live household synchronization is implemented. Financial numbers are fictional examples, never current quotes; pasted news gets an extractive first-three-sentence digest, not a GPT summary. Business outputs are template hypotheses and keyword heuristics. Each visitor's inventory/tasks/notes persist only in that browser. Photo previews are temporary and never uploaded.
+No connected LLM, vision recognition, live financial/retailer feed, direct order placement, or live household synchronization is implemented. Each visitor's inventory/tasks/notes persist only in that browser. Photo previews are temporary and never uploaded.
 
 If the assignment requires genuine in-app AI, add a secure backend and model connection. Do not put an API key in public code, a browser bundle, or GitHub Pages configuration visible to visitors.
 
@@ -53,7 +53,6 @@ If the assignment requires genuine in-app AI, add a secure backend and model con
 ## Source map
 
 - `app/page.tsx`: food-planning application and Project Studio.
-- `app/business-lab.tsx`: five assignment tools.
 - `lib/planner.ts`: recipe library and grocery math.
 - `static/main.tsx`, `index.html`, `vite.pages.config.ts`: GitHub Pages entry/build.
 - `tests/planner.test.ts`: calculation and constraint tests.
