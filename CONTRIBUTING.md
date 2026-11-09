@@ -2,7 +2,7 @@
 
 ## One shared repository
 
-1. The team repository is https://github.com/BUS-659/bus-659.github.io (public). Anyone can read or fork it; direct edits require collaborator access.
+1. The team repository is https://github.com/fridgeful-meals/fridgeful-meals.github.io (public). Anyone can read or fork it; direct edits require collaborator access.
 2. The complete source is at the repository root. Clone it rather than uploading a ZIP as the only file.
 3. Invite teammates through repository Settings → Collaborators with write access. Each teammate uses their own account.
 4. Clone the repository, install dependencies, and use npm run dev:pages as described in README.md.

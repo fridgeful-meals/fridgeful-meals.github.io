@@ -15,3 +15,5 @@
 - Expanded Business Lab to all five suggestions, preserving clear boundaries between templates, extractive summaries, fictional samples, manual model prompts and live AI.
 
 - Scope correction: user asked to return to the original food-scanner concept. Removed Business Lab navigation and the five generic business-analysis exercises; retained the food journey and team/spec workspace.
+
+- Renamed the organization and Pages repository to fridgeful-meals/fridgeful-meals.github.io at the user’s request for a food-focused free address.

@@ -2,7 +2,7 @@
 
 **Less waste. More dinner.** BUS 659 group project.
 
-Website target: **https://bus-659.github.io/**. Check the repository's Actions / Pages deployment before sharing as live.
+Website target: **https://fridgeful-meals.github.io/**. Check the repository's Actions / Pages deployment before sharing as live.
 
 ## Run and build
 
@@ -25,7 +25,7 @@ The static build is in `out/`. GitHub Pages → Build and deployment → Source 
 
 ## Work together
 
-Use **BUS-659/bus-659.github.io** as the shared source repository going forward. Invite members through the organization and grant write access to this repository. Work on a separate branch per improvement, open a pull request, and have a teammate review it before merging. Public read/fork access does not grant direct editing rights.
+Use **fridgeful-meals/fridgeful-meals.github.io** as the shared source repository going forward. Invite members through the organization and grant write access to this repository. Work on a separate branch per improvement, open a pull request, and have a teammate review it before merging. Public read/fork access does not grant direct editing rights.
 
 The earlier `kaylac18/Fridgeful` repository is preserved as a prior snapshot; it does not automatically sync with this repository. The existing chatgpt.site copy is likewise a separate deployment.
 
