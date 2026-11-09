@@ -1,0 +1,10 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {recipes,defaultSettings,sampleInventory,makePlan,shoppingList,totalCost} from '../lib/planner.ts';
+test('inventory is subtracted once across repeated meals, then packages round up',()=>{const pasta=recipes[0];const l=shoppingList([pasta,pasta],sampleInventory,2);const t=l.find(i=>i.name==='tomatoes')!;assert.equal(t.needed,4);assert.equal(t.missing,0);const p=l.find(i=>i.name==='pasta')!;assert.equal(p.missing,320);assert.equal(p.packs,1);assert.equal(p.cost,1.49);});
+test('incompatible inventory units do not silently remove purchases',()=>{const l=shoppingList([recipes[0]],[{name:'pasta',qty:1000,unit:'each',location:'Pantry',soon:false}],4);assert.equal(l.find(i=>i.name==='pasta')!.missing,320);});
+test('countable ingredients round per recipe before aggregation',()=>{const l=shoppingList([recipes[1],recipes[1]],[],1);assert.equal(l.find(i=>i.name==='onion')!.needed,2);assert.equal(l.find(i=>i.name==='onion')!.packs,2);});
+test('vegetarian and time constraints hold for all dinners',()=>{const p=makePlan({...defaultSettings,people:3,days:7,diet:'Vegetarian',minutes:20},sampleInventory);assert.equal(p.length,7);assert.ok(p.every(r=>r.vegetarian&&r.minutes<=20));});
+test('default household has five budget-fitting dinners',()=>{const p=makePlan(defaultSettings,sampleInventory);assert.equal(p.length,5);assert.ok(totalCost(p,sampleInventory,2)<=65);});
+test('infeasible budget produces an honest overage rather than a fake price',()=>{const p=makePlan({...defaultSettings,people:12,budget:1,days:7},[]);assert.equal(p.length,7);assert.ok(totalCost(p,[],12)>1);});
+test('sufficient inventory yields zero purchases without negative costs',()=>{const l=shoppingList([recipes[0]],[...sampleInventory,{name:'pasta',qty:1000,unit:'g',location:'Pantry',soon:false}],2);assert.ok(l.every(i=>i.missing===0&&i.cost===0));});
