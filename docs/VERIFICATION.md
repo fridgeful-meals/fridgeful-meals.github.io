@@ -13,3 +13,8 @@
 ## Limits / remaining checks
 
 Photo upload file-validation edge cases and full JSON import/export combinations have not received an exhaustive browser test. Source review and import validation are implemented. No real vision, AI, store catalog, cart ordering or multi-user sync is claimed. Exact grading coverage awaits the rubric. Website audience and teammate repository invitations require the user's sharing choices and teammate accounts.
+
+
+## Free browser scanner — 2026-11-10
+
+15 automated tests pass, including supported food filtering, invalid confidence rejection, grouping, starter weights, inventory updates and quantity validation. TypeScript and static production build pass. Browser test: an actual uploaded Wikimedia banana photo was detected as bananas at 99% model score; edited quantity 3 saved, repeat scan updated it to 1 without a duplicate row, and test item was removed afterward. A generated blank image returned no supported food matches and preserved inventory. First model download required waiting; a subsequent scan reused the loaded model. These tests establish real inference, not comprehensive fridge recognition.

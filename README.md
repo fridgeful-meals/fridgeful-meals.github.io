@@ -31,13 +31,13 @@ The earlier `kaylac18/Fridgeful` repository is preserved as a prior snapshot; it
 
 ## Features
 
-Search across 460 ingredients with category filters and aliases, fridge image preview and editable inventory; household settings; rule-based dinner plans; recipes and swaps; package-based grocery estimates; shopping exports; external Instacart handoff; team tasks/notes; validated JSON handoffs; downloadable spec; timed demo guide; incremental build prompts.
+Search across 460 ingredients with category filters and aliases, free on-device food photo detection and editable inventory; household settings; rule-based dinner plans; recipes and swaps; package-based grocery estimates; shopping exports; external Instacart handoff; team tasks/notes; validated JSON handoffs; downloadable spec; timed demo guide; incremental build prompts.
 
 The website stays focused on the original fridge-to-dinner concept. The five generic business-tool suggestions are not separate app features.
 
 ## Honest limits
 
-No connected LLM, vision recognition, live financial/retailer feed, direct order placement, or live household synchronization is implemented. Each visitor's inventory/tasks/notes persist only in that browser. Photo previews are temporary and never uploaded.
+Photo recognition uses a free browser model limited to ten food types; see docs/PHOTO_SCANNING.md. No connected LLM, live financial/retailer feed, direct order placement, or live household synchronization is implemented. Each visitor's inventory/tasks/notes persist only in that browser. Photo previews are temporary and never uploaded.
 
 If the assignment requires genuine in-app AI, add a secure backend and model connection. Do not put an API key in public code, a browser bundle, or GitHub Pages configuration visible to visitors.
 

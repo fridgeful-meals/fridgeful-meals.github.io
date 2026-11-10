@@ -8,7 +8,7 @@ Busy households struggle to know what they own, plan meals, and avoid duplicate 
 
 ## Main journey
 
-1. Upload a local image for review or load the explicitly labeled sample scan.
+1. Upload a local image, run free browser detection, and confirm results; alternatively load the explicitly labeled fixed demo kitchen.
 2. Confirm ingredients, quantities, units, location, and a user-set use-soon flag.
 3. Choose 1–12 people, a $1–$1,000 dinner budget, 1–7 dinners, store label, Any/Vegetarian diet, cooking-time limit, meal cravings, and priority.
 4. Create a plan from six curated recipes. Inspect scaled ingredients/steps and swap meals.
@@ -19,7 +19,7 @@ Busy households struggle to know what they own, plan meals, and avoid duplicate 
 
 | Requirement | Observable acceptance criterion | Boundary |
 | --- | --- | --- |
-| Photo | Accepted JPG/PNG/WebP under 8 MB previews; invalid files show an error | No vision inference; sample scan is explicitly fixed data |
+| Photo | Accepted JPG/PNG/WebP under 8 MB previews; invalid files show an error | Free COCO-SSD recognition for ten food classes; confirmation required. Fixed demo kitchen is separate. |
 | Inventory | Add/delete/edit quantities and toggle user-specified use soon | Custom names persist but only catalog recipes use known ingredients |
 | Household | Validated household, budget, dinners, store, diet, time and priority | Vegetarian only; no clinical/allergen guarantees |
 | Plan | Requested dinner count, eligible recipes, consistent serving scaling, swaps update list | Curated rule-based heuristic, no claim of global optimality |
@@ -47,7 +47,7 @@ Free basic plan; test a $4.99/month premium hypothesis for shared households and
 
 ## Scope and limits
 
-Working: forms, calculations, recipe selection, persistence, exports. Simulated: scan recognition and illustrative grocery prices. Planned: real vision, live store catalogs, validated allergy/nutrition handling, authenticated synchronization and permitted grocery ordering. A financial ticker dashboard and job impact estimator were examples from the assignment prompt, not confirmed requirements; omit unless the rubric requires them.
+Working: free on-device basic photo recognition with review, forms, calculations, recipe selection, persistence, exports. Simulated: fixed demo kitchen and illustrative grocery prices. Planned: broader ingredient recognition, live store catalogs, validated allergy/nutrition handling, authenticated synchronization and permitted grocery ordering. A financial ticker dashboard and job impact estimator were examples from the assignment prompt, not confirmed requirements; omit unless the rubric requires them.
 
 Users confirm ingredients and freshness; the app cannot detect spoilage. Recipe images are illustrative. Basic seasonings, breakfast/lunch, taxes and delivery fees are excluded. Review labels for allergies. External assets and Instacart require internet access; core local planning does not.
 
@@ -56,7 +56,7 @@ Users confirm ingredients and freshness; the app cannot detect spoilage. Recipe 
 
 The five business-tool examples are alternative assignment suggestions, not Fridgeful features. At the user's request, the website focuses on the original food-scanner concept: photo review, editable fridge/pantry inventory, household preferences, weekly meals, budget-aware shopping and quick recipes. Project Studio retains the spec, team tasks, build prompts and presentation guide.
 
-Real vision and model-generated recommendations remain future integrations; the current prototype labels its sample scanning and rule-based recipe selection honestly.
+Broad ingredient recognition and model-generated recommendations remain future integrations; free basic detection and rule-based recipe selection are labeled with their limits.
 
 ## GitHub Pages delivery
 
@@ -64,8 +64,13 @@ The organization website repository is fridgeful-meals/fridgeful-meals.github.io
 
 ## Ingredient search
 
-My fridge includes a searchable built-in list of 460 ingredients across 15 food categories alongside photo upload. Search matches common names and aliases (for example, tomato → tomatoes). Selecting a result opens the quantity/unit/location confirmation form. Existing items with matching name, unit and location receive the added quantity instead of a duplicate row; other locations or units remain separate. Unknown names can be added as custom inventory. Only ingredients in the existing recipe library affect meal recommendations and grocery deductions; no live store search or new AI recognition is implied.
+My fridge includes a searchable built-in list of 460 ingredients across 15 food categories alongside photo upload. Search matches common names and aliases (for example, tomato → tomatoes). Selecting a result opens the quantity/unit/location confirmation form. Existing items with matching name, unit and location receive the added quantity instead of a duplicate row; other locations or units remain separate. Unknown names can be added as custom inventory. Only ingredients in the existing recipe library affect meal recommendations and grocery deductions; no live store search is implied. Photo detection is separately limited to the ten classes documented in PHOTO_SCANNING.md.
 
 ### Extended ingredient coverage
 
 Includes meat/poultry (ground beef and minced-beef aliases), seafood, vegetables, fruit, dairy, dairy alternatives, plant proteins, grains/pasta, bread, beans/canned foods, herbs/spices, sauces, baking, nuts/seeds/dried fruit, and frozen foods. Categories are computed from the curated dataset. Exact ingredient matches rank first, aliases next, then broader matches; token order and accents are normalized. Category filtering, batches of 12, and a scrollable result area keep the page manageable. This expands inventory search only, not the six-recipe planner or retailer price catalog.
+
+
+## Free photo recognition
+
+Real browser-based COCO-SSD inference recognizes apples, bananas, oranges, broccoli, carrots, sandwiches, hot dogs, pizza, donuts and cake. It cannot recognize all fridge ingredients, read labels, infer container contents, measure weight or assess freshness. Uploaded photos stay on device; model files download from TensorFlow hosting. Results require user selection and quantity/location confirmation before inventory updates. Matching rows are updated, other inventory is retained, and rescanning does not keep adding quantities. First model download needs internet. No API account or paid inference service is used. See PHOTO_SCANNING.md for technical scope and testing.

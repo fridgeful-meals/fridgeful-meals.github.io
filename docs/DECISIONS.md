@@ -21,3 +21,8 @@
 - Added built-in ingredient search alongside photo upload. Search aliases map to canonical ingredients; same-unit/same-location additions merge quantities. Custom ingredients remain inventory-only when outside the recipe library.
 
 - Expanded inventory search to a curated 460-name library with categories, aliases and ranked matching. Kept specific cuts/products distinct from generic ingredients. No broader recipe coverage or live catalog access is implied.
+
+
+## 2026-11-10 — Free-only photo detection
+
+The owner requested no paid service. Use a lazy-loaded browser COCO-SSD detector, not a paid vision API or public-key workaround. Clearly disclose its ten food labels, require result/quantity review, preserve manual search, and never interpret bottles as milk. Confirmed scan quantities update matching inventory rather than accumulating on repeat scans. Broad fridge understanding remains outside this free basic implementation.
